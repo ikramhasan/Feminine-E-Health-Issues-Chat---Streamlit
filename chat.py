@@ -32,7 +32,7 @@ def return_result(dict, query, threshold):
     
 
 def open_dataset():
-    with open('test.csv', mode='r', encoding="utf8") as infile:
+    with open('bangla-dataset.csv', mode='r', encoding="utf8") as infile:
         reader = csv.reader(infile)
         mydict = {rows[0]:rows[1] for rows in reader}
         return mydict
@@ -49,7 +49,7 @@ with tab2:
 
 
 with tab1:
-    query = st.text_input("Enter your question", "How can menstrual cramps be treated?")
+    query = st.text_input("Enter your question", "মাসিকের সময় কতটা রক্তপাত স্বাভাবিক?")
 
     with st.spinner('Searching...'):
         with st.empty():
