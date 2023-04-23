@@ -59,8 +59,11 @@ with tab1:
         tts = gTTS(text=search_result, lang='bn', slow=False)
         filename = os.path.dirname(__file__)+ "/" + "result.mp3"
         tts.save(filename)
-        playsound.playsound(filename)
-        os.remove(filename)
+        # playsound.playsound(filename)
+        audio_file = open(filename, 'rb')
+        audio_bytes = audio_file.read()
+        st.audio(audio_bytes, format='audio/ogg')
+        # os.remove(filename)
 
 
 
