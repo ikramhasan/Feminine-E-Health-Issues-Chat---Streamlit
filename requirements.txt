@@ -1,4 +1,3 @@
 fuzzywuzzy
-csv
 gtts
 playsound
